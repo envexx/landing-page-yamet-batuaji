@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/SF-Pro-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SF-Pro-Display-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets//fonts/SF-Pro-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets//fonts/SF-Pro-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets//fonts/SF-Pro-Display-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets//fonts/SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets//fonts/SF-Pro-Display-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+@layer utilities {
+  .up-transition {
+    @apply transition-transform duration-200 ease-in-out hover:-translate-y-1 active:translate-y-0;
+  }
+}
+
+
+ @keyframes gradient {
+   0% { background-position: 0% 50%; }
+   50% { background-position: 100% 50%; }
+   100% { background-position: 0% 50%; }
+ }
+ 
+ .animate-gradient {
+   background-size: 200% 200%;
+   animation: gradient 6s ease infinite;
+ }
+
+ @keyframes flowDown {
+   0% { transform: translateY(-50%); }
+   100% { transform: translateY(0); }
+ }
+
+ @keyframes flowUp {
+   0% { transform: translateY(0); }
+   100% { transform: translateY(-50%); }
+ }
+
+ @keyframes scrollHorizontal {
+   0% { transform: translateX(0); }
+   100% { transform: translateX(-50%); }
+ }
+
+ .animate-flow-down {
+   animation: flowDown 15s linear infinite;
+ }
+
+ .animate-flow-up {
+   animation: flowUp 15s linear infinite;
+ }
+
+ .animate-scroll-horizontal {
+   animation: scrollHorizontal 20s linear infinite;
+ }
+
+ @keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+}
+
+@keyframes flowLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-flow-left {
+  animation: flowLeft 30s linear infinite;
+}
